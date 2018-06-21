@@ -12,4 +12,5 @@ Steps
 7. Go to script folder: cd ubuntu-in-termux
 8. Give execution permission: chmod +x ubuntu.sh
 9. Run script: ./ubuntu.sh
-10. Now just start ubuntu: ./start.sh
+10. Fix resolv.conf: cp ~/ubuntu-in-termux/resovl.conf ~/ubuntu-in-termux/ubuntu-fs/etc/
+11. Now just start ubuntu: ./start.sh
