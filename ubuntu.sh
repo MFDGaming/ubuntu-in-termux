@@ -8,13 +8,13 @@ if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
         echo "downloading ubuntu-image"
         if [ "$(dpkg --print-architecture)" = "aarch64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04-base-arm64.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-arm64.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "arm" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04-base-armhf.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-armhf.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "i686" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04-base-i386.tar.gz -O ubuntu.tar.gz
+            wget -http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-i386.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "i386" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04-base-i386.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-i386.tar.gz -O ubuntu.tar.gz
         else
             echo "unknown architecture"
             exit 1
