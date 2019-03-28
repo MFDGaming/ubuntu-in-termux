@@ -8,15 +8,15 @@ if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
         echo "downloading ubuntu-image"
         if [ "$(dpkg --print-architecture)" = "aarch64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-arm64.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-amd64.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "arm" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-armhf.tar.gz -O ubuntu.tar.gz
+            wget  http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-armhf.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "x86_64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-amd64.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-amd64.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "i*86" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-i386.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-i386.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "x86" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-i386.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/disco-base-i386.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "amd64" ];then
             wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.10/release/ubuntu-base-18.10-base-amd64.tar.gz -O ubuntu.tar.gz
 
