@@ -3,6 +3,9 @@ folder=ubuntu-fs
 if [ -d "$folder" ]; then
     first=1
     echo "skipping downloading"
+elif [ -z "$(command -v wget)" ] || [ -z "$(command -v proot)" ]; then
+    echo "Install wget, proot and execute"
+    exit 1
 fi
 if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
