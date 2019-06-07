@@ -31,7 +31,11 @@ if [ "$first" != 1 ];then
     echo "decompressing ubuntu image"
     proot --link2symlink tar -xf $cur/ubuntu.tar.gz --exclude='dev'||:
     echo "fixing nameserver, otherwise it can't connect to the internet"
-    echo "nameserver 8.8.8.8" > etc/resolv.conf
+    {
+    echo 'domain http://ports.ubuntu.com/ubuntu-ports/pool/main/p/perl/perl_5.24.1-2ubuntu1_armhf.deb'
+    echo 'nameserver 8.8.8.8'
+    echo 'nameserver 8.8.4.4'
+    } > etc/resolv.conf
     stubs=()
     stubs+=('usr/bin/groups')
     
