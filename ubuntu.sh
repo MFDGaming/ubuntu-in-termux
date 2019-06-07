@@ -1,37 +1,32 @@
 #!/data/data/com.termux/files/usr/bin/bash
 folder=ubuntu-fs
+VERSION="19.04"
 if [ -d "$folder" ]; then
     first=1
     echo "skipping downloading"
+elif [ -z "$(command -v proot)" ]; then
+    echo "Install proot and execute"
+    exit 1
 fi
 if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
         echo "downloading ubuntu-image"
-        if [ "$(dpkg --print-architecture)" = "aarch64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-arm64.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "arm" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-armhf.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "x86_64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-amd64.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "i*86" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-i386.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "x86" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-i386.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "amd64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-amd64.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "i686" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-i386.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "i386" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-i386.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "i586" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-i386.tar.gz -O ubuntu.tar.gz
-
-
-
-        else
-            echo "unknown architecture"
+        ARCH="$(dpkg --print-architecture)"
+        case "$ARCH" in
+            aarch64) ARCH=arm64;;
+            amd64|x86_64) ARCH=amd64;;
+            arm) ARCH=armhf;;
+            x86|i*86) ARCH=i386;;
+            *)
+                echo "unknown architecture :- $ARCH"
+                exit 1
+                ;;
+        esac
+        if [ -z "$(command -v wget)" ]; then
+            echo "Install wget and execute"
             exit 1
         fi
+        wget http://cdimage.ubuntu.com/ubuntu-base/releases/${VERSION}/release/ubuntu-base-${VERSION}-base-${ARCH}.tar.gz -O ubuntu.tar.gz
     fi
     cur=`pwd`
     mkdir -p $folder
