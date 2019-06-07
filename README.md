@@ -11,3 +11,5 @@ Steps
 5. Go to script folder: `cd ubuntu-in-termux`
 6. Run script: `bash ubuntu.sh`
 7. Now just start ubuntu: `./start.sh`
+
+<p align="center"><img src="Screenshot_20190420-113146.png" width="300"/></p>
