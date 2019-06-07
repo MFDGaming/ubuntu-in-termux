@@ -10,22 +10,19 @@ elif [ -z "$(command -v proot)" ]; then
 fi
 if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
-        echo "downloading ubuntu-image"
         ARCH="$(dpkg --print-architecture)"
         case "$ARCH" in
             aarch64) ARCH=arm64;;
             amd64|x86_64) ARCH=amd64;;
             arm) ARCH=armhf;;
             x86|i*86) ARCH=i386;;
-            *)
-                echo "unknown architecture :- $ARCH"
-                exit 1
-                ;;
+            *) echo "unknown architecture :- $ARCH"; exit 1;;
         esac
         if [ -z "$(command -v wget)" ]; then
             echo "Install wget and execute"
             exit 1
         fi
+        echo "downloading ubuntu-image of ARCH:- $ARCH"
         wget http://cdimage.ubuntu.com/ubuntu-base/releases/${VERSION}/release/ubuntu-base-${VERSION}-base-${ARCH}.tar.gz -O ubuntu.tar.gz
     fi
     cur=`pwd`
