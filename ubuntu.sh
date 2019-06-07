@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 folder=ubuntu-fs
-VERSION="19.04"
+VERSION="19.04-base"
 if [ -d "$folder" ]; then
     first=1
     echo "skipping downloading"
@@ -23,7 +23,7 @@ if [ "$first" != 1 ];then
             exit 1
         fi
         echo "downloading ubuntu-image of ARCH:- $ARCH"
-        wget http://cdimage.ubuntu.com/ubuntu-base/releases/${VERSION}/release/ubuntu-base-${VERSION}-base-${ARCH}.tar.gz -O ubuntu.tar.gz
+        wget http://cdimage.ubuntu.com/ubuntu-base/releases/${VERSION}/release/ubuntu-base-${VERSION}-${ARCH}.tar.gz -O ubuntu.tar.gz
     fi
     cur=`pwd`
     mkdir -p $folder
