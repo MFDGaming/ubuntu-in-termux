@@ -9,4 +9,6 @@ This is a script by which you can install Ubuntu in your termux application with
 2. Install wget, curl and proot: `apt install wget curl proot git -y`
 3. Go to HOME folder: `cd ~`
 4. Download script: `curl -o ~/ubuntu.sh https://raw.githubusercontent.com/MFDGaming/ubuntu-in-termux/master/ubuntu.sh`
-5. Now just start ubuntu: ./start.sh
+5. Change permission to executable: `chmod +x ubuntu.sh`
+6. Run Ubuntu install script: `./ubuntu.sh`
+7. Now just start ubuntu: ./start.sh
