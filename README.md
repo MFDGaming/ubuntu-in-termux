@@ -1,7 +1,7 @@
 # ubuntu-in-termux
 This is a script by which you can install Ubuntu in your termux application without rooted device
 
-# FULLY UPDATED TO UBUNTU 19.04 DISCO
+## FULLY UPDATED TO UBUNTU 19.04 DISCO
 
 Steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
