@@ -15,3 +15,6 @@ This is a script by which you can install Ubuntu in your termux application with
 9. Run script: `./ubuntu.sh`
 10. Fix resolv.conf: `cp ~/ubuntu-in-termux/resolv.conf ~/ubuntu-in-termux/ubuntu-fs/etc/`
 11. Now just start ubuntu: `./start.sh`
+
+### Todo
+- [ ] **Discord server**
