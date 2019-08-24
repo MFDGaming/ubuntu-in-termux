@@ -4,8 +4,8 @@ This is a script by which you can install Ubuntu in your termux application with
 # FULLY UPDATED TO UBUNTU 19.04 DISCO
 
 Steps
-1. Update termux: apt-get update && apt-get upgrade -y
-2. Install wget: apt-get install wget -y
+1. Update termux: `apt-get update && apt-get upgrade -y`
+2. Install wget: `apt-get install wget -y`
 3. Install proot: apt-get install proot -y
 4. Install git: apt-get install git -y
 5. Go to HOME folder: cd ~
