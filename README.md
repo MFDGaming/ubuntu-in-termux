@@ -1,5 +1,5 @@
 # ubuntu-in-termux
-This is a script by which you can install Ubuntu in your termux application without rooted phone
+This is a script by which you can install Ubuntu in your termux application without rooted device
 
 # FULLY UPDATED TO UBUNTU 19.04 DISCO
 
