@@ -17,4 +17,4 @@ This is a script by which you can install Ubuntu in your termux application with
 11. Now just start ubuntu: `./start.sh`
 
 ### Todo
-- [ ] **Discord server**
+- [x] **Discord server**
