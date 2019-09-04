@@ -17,7 +17,7 @@ This is a script by which you can install Ubuntu in your termux application with
 6. Run script: `bash ubuntu.sh`
 7. Now just start ubuntu: `./start.sh`
 
-###Screenshots
+### Screenshots
 
 <p align="center"><img src="Screenshot_20190420-113146.png" width="300"/></p>
 
