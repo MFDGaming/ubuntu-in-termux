@@ -3,7 +3,7 @@
 
 ## What's This?
 
-This is a script by which you can install Ubuntu in your termux application without a rooted device
+This is a fork of the project http://github.com/MFDGaming/ubuntu-in-termux that is officially developed by MFDGaming
 
 ## Updates
 **FULLY UPDATED TO UBUNTU 19.04 DISCO**
