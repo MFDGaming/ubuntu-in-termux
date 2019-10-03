@@ -17,12 +17,11 @@ This is a script by which you can install Ubuntu in your termux application with
 6. Download script: `git clone https://github.com/MFDGaming/ubuntu-in-termux.git`
 7. Go to script folder: `cd ubuntu-in-termux`
 8. Give execution permission: `chmod +x ubuntu.sh`
-9. Run script: `./ubuntu.sh`
-10. Fix resolv.conf: `cp ~/ubuntu-in-termux/resolv.conf ~/ubuntu-in-termux/ubuntu-fs/etc/`
-11. Now just start ubuntu: `./start.sh`
+9. Run the script: `./ubuntu.sh`
+10. Now just start ubuntu: `./start.sh`
 
 ### Todo
 - [x] **Discord server**
 - [ ] **Upgrade to ubuntu 19.10 when it is released**
-- [ ] **Add colors to the installer**
+- [ ] **Add colors and reformat the text to the installer**
 - [ ] **Fix installation problem for some devices**
