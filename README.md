@@ -23,5 +23,5 @@ This is a script by which you can install Ubuntu in your termux application with
 ### Todo
 - [x] **Discord server**
 - [ ] **Upgrade to ubuntu 19.10 when it is released**
-- [x] **Add colors and reformat the text to the installer**
+- [x] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
