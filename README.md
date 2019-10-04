@@ -25,3 +25,4 @@ This is a script by which you can install Ubuntu in your termux application with
 - [ ] **Upgrade to ubuntu 19.10 when it is released**
 - [x] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
+- [ ] **Fix some text format bugs after the color update**
