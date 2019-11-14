@@ -6,7 +6,7 @@
 This is a script by which you can install Ubuntu in your termux application without a rooted device
 
 ## Updates
-**FULLY UPDATED TO UBUNTU 19.04 DISCO**
+**FULLY UPDATED TO UBUNTU 19.10 EOAN**
 
 ### Installation steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
@@ -22,7 +22,7 @@ This is a script by which you can install Ubuntu in your termux application with
 
 ### Todo
 - [x] **Discord server**
-- [ ] **Upgrade to ubuntu 19.10 when it is released**
+- [x] **Upgrade to ubuntu 19.10 when it is released**
 - [x] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
 - [ ] **Fix some text format bugs after the color update**
