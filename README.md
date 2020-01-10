@@ -23,7 +23,5 @@ This is a script by which you can install Ubuntu in your termux application with
 10. Now just start ubuntu: `./startubuntu.sh`
 
 ### Todo
-- [x] **Discord server**
-- [x] **Upgrade to ubuntu 19.10 when it is released**
 - [ ] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
