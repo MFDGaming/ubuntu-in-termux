@@ -23,5 +23,5 @@ This is a script by which you can install Ubuntu in your termux application with
 10. Now just start ubuntu: `./startubuntu.sh`
 
 ### Todo
-- [ ] **Add colors and reformat the text in the installer**
+- [x] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
