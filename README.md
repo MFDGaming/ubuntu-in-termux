@@ -7,7 +7,8 @@ This is a script by which you can install Ubuntu in your termux application with
 
 ## Updates
 **• REWRITTEN THE INSTALL SCRIPT**
-**. ADDED COLORS AND REFORNATTED THE TEXT**
+
+**• ADDED COLORS AND REFORNATTED THE TEXT**
 
 **• FULLY UPDATED TO UBUNTU 19.10 EOAN**
 
