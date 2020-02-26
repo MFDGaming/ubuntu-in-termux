@@ -7,6 +7,7 @@ This is a script by which you can install Ubuntu in your termux application with
 
 ## Updates
 **• REWRITTEN THE INSTALL SCRIPT**
+**. ADDED COLORS AND REFORNATTED THE TEXT**
 
 **• FULLY UPDATED TO UBUNTU 19.10 EOAN**
 
@@ -23,5 +24,4 @@ This is a script by which you can install Ubuntu in your termux application with
 10. Now just start ubuntu: `./startubuntu.sh`
 
 ### Todo
-- [x] **Add colors and reformat the text in the installer**
 - [ ] **Fix installation problem for some devices**
