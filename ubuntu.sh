@@ -11,9 +11,11 @@ first=1
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;227m[WARNING]:\e[0m \x1b[38;5;87m Skipping the download and the extraction\n"
 elif [ -z "$(command -v proot)" ];then
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Please install proot.\n"
+printf "\e[0m"
 exit 1
 elif [ -z "$(command -v wget)" ];then
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Please install wget.\n"
+printf "\e[0m"
 exit 1
 fi
 if [ "$first" != 1 ];then
