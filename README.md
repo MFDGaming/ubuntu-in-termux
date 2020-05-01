@@ -1,4 +1,4 @@
-# ubuntu-in-termux
+# ubuntu-in-termux-19.10
 [![DISCORD](https://img.shields.io/badge/Chat-On%20Discord-738BD7.svg?style=for-the-badge)](https://discord.gg/Vyecdkj)
 
 ## What's This?
@@ -6,7 +6,7 @@
 This is a script by which you can install Ubuntu in your termux application without a rooted device
 
 ## Updates
-**• Add Ubuntu 19.10 branch**
+**• Added Ubuntu 19.10 branch**
 
 ### Installation steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
