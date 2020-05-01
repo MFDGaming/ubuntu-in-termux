@@ -10,7 +10,7 @@ This is a script by which you can install Ubuntu in your termux application with
 
 ## Important
 
-**• Who ever wants to still use ubuntu in termux with a x86/i*86 architecture or likes to use ubuntu 19.10 he/she can use this branch -> https://github.com/MFDGaming/ubuntu-in-termux/tree/ubuntu19.10 **
+**• Who ever wants to still use ubuntu in termux with a x86/i*86 architecture or likes to use ubuntu 19.10 he/she can use this branch -> https://github.com/MFDGaming/ubuntu-in-termux/tree/ubuntu19.10**
 
 ### Installation steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
