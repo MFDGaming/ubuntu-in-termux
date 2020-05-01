@@ -6,7 +6,7 @@
 This is a script by which you can install Ubuntu in your termux application without a rooted device
 
 ## Updates
-**• Add Ubuntu 19.10 branch
+**• Add Ubuntu 19.10 branch**
 
 ### Installation steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
