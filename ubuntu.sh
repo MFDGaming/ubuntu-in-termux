@@ -29,7 +29,6 @@ case "$ARCHITECTURE" in
 aarch64) ARCHITECTURE=arm64;;
 arm) ARCHITECTURE=armhf;;
 amd64|x86_64) ARCHITECTURE=amd64;;
-x86|i*86) ARCHITECTURE=i386;;
 *)
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Unknown architecture :- $ARCHITECTURE"
 exit 1
