@@ -11,7 +11,8 @@ This is a script by which you can install Ubuntu in your termux application with
 ## Important
 
 **• Who ever wants to still use ubuntu in termux with a x86/i*86 architecture or likes to use ubuntu 19.10 he/she can use this branch -> https://github.com/MFDGaming/ubuntu-in-termux/tree/ubuntu19.10**
-
+**• If you get "Fatal Kernel too old" you have to uncomment the line that writes "command+=" -k 4.14.81"" (remove the # that is located in front of the line) in the "startubuntu.sh" file**
+ 
 ### Installation steps
 1. Update termux: `apt-get update && apt-get upgrade -y`
 2. Install wget: `apt-get install wget -y`
