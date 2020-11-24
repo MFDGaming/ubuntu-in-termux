@@ -4,7 +4,7 @@
 
 ## What's This?
 
-This is a script by which you can install Ubuntu in your termux application without a rooted device
+This is a script that allows you to install Ubuntu in your termux application without a rooted device
 
 ## Updates
 
