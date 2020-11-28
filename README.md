@@ -28,7 +28,7 @@ This is a script by which you can install Ubuntu in your termux application with
 
 ## or Copy lines of command into your termux
 and it will automatically take care of everything
-`
+```
 apt-get update && apt-get upgrade -y
 
 apt-get install wget -y
@@ -49,7 +49,7 @@ chmod +x ubuntu.sh
 ./ubuntu.sh -y
 
 ./startubuntu.sh
-`
+```
 
 
 ### Todo
