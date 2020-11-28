@@ -26,5 +26,31 @@ This is a script by which you can install Ubuntu in your termux application with
 9. Run the script: `./ubuntu.sh -y`
 10. Now just start ubuntu: `./startubuntu.sh`
 
+## or Copy lines of command into your termux
+and it will automatically take care of everything
+
+apt-get update && apt-get upgrade -y
+
+apt-get install wget -y
+
+apt-get install proot -y
+
+apt-get install git -y
+
+cd ~
+
+git clone https://github.com/MFDGaming/ubuntu-in-termux.git
+
+cd ubuntu-in-termux
+
+chmod +x ubuntu.sh
+
+ 
+./ubuntu.sh -y
+
+./startubuntu.sh
+
+
+
 ### Todo
 - [ ] **Fix installation problem for some devices**
