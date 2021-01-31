@@ -28,6 +28,7 @@ This is a script that allows you to install Ubuntu in your termux application wi
 8. Give execution permission: `chmod +x ubuntu.sh`
 9. Run the script: `./ubuntu.sh -y`
 10. Now just start ubuntu: `./startubuntu.sh`
+11. In root@localhost:~# shell, run `apt-get update && apt-get upgrade -y` before you can do `apt install <package name>`
 
 ### Todo
 
