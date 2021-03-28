@@ -29,6 +29,24 @@ This is a script that allows you to install Ubuntu in your termux application wi
 9. Run the script: `./ubuntu.sh -y`
 10. Now just start ubuntu: `./startubuntu.sh`
 
+#### Commands to be executed within termux (for copy and paste)
+
+```bash
+apt-get update && apt-get upgrade -y; \
+apt-get install wget proot git -y; \
+cd ~; \
+git clone https://github.com/MFDGaming/ubuntu-in-termux.git; \
+cd ubuntu-in-termux; \
+chmod +x ubuntu.sh; \
+./ubuntu.sh -y; \
+./startubuntu.sh;
+
+# option command
+# Automatically start Ubuntu after starting termux
+cd ~; \
+echo "./ubuntu-in-termux/startubuntu.sh" >> ~/.bashrc
+```
+
 ### Todo
 
 -   [ ] **Fix installation problem for some devices**
