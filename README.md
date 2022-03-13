@@ -8,7 +8,7 @@ This is a script that allows you to install Ubuntu in your termux application wi
 
 ## Updates
 
-**• Updated to ubuntu 20.04**
+**• Updated to ubuntu 22.04**
 
 ## Important
 
