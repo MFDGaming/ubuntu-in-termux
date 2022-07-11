@@ -36,7 +36,7 @@ exit 1
 
 esac
 
-wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Rootfs/Ubuntu/${ARCHITECTURE}/ubuntu-rootfs-${ARCHITECTURE}.tar.xz -q -O ubuntu.tar.gz 
+wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Rootfs/Ubuntu/${ARCHITECTURE}/ubuntu-rootfs-${ARCHITECTURE}.tar.xz -q -O ubuntu.tar.xz
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Download complete!\n"
 
 fi
@@ -45,7 +45,7 @@ cur=`pwd`
 mkdir -p $directory
 cd $directory
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Decompressing the ubuntu rootfs, please wait...\n"
-proot --link2symlink tar -zxf $cur/ubuntu.tar.gz --exclude='dev'||:
+proot --link2symlink tar -xJf $cur/ubuntu.tar.xz --exclude='dev'||:
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m The ubuntu rootfs have been successfully decompressed!\n"
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Fixing the resolv.conf, so that you have access to the internet\n"
 printf "nameserver 8.8.8.8\nnameserver 8.8.4.4\n" > etc/resolv.conf
