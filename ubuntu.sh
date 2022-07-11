@@ -4,7 +4,7 @@ time1="$( date +"%r" )"
 
 install1 () {
 directory=ubuntu-fs
-UBUNTU_VERSION=jammy
+#UBUNTU_VERSION=jammy
 if [ -d "$directory" ];then
 first=1
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;227m[WARNING]:\e[0m \x1b[38;5;87m Skipping the download and the extraction\n"
@@ -28,6 +28,7 @@ case "$ARCHITECTURE" in
 aarch64) ARCHITECTURE=arm64;;
 arm) ARCHITECTURE=armhf;;
 amd64|x86_64) ARCHITECTURE=amd64;;
+i386|i686|x86) ARCHITECTURE=i386;;
 *)
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Unknown architecture :- $ARCHITECTURE"
 exit 1
@@ -35,7 +36,7 @@ exit 1
 
 esac
 
-wget https://partner-images.canonical.com/core/${UBUNTU_VERSION}/current/ubuntu-${UBUNTU_VERSION}-core-cloudimg-${ARCHITECTURE}-root.tar.gz -q -O ubuntu.tar.gz 
+wget https://raw.githubusercontent.com/EXALAB/Anlinux-Resources/master/Rootfs/Ubuntu/${ARCHITECTURE}/ubuntu-rootfs-${ARCHITECTURE}.tar.xz -q -O ubuntu.tar.gz 
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Download complete!\n"
 
 fi
@@ -48,6 +49,7 @@ proot --link2symlink tar -zxf $cur/ubuntu.tar.gz --exclude='dev'||:
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m The ubuntu rootfs have been successfully decompressed!\n"
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Fixing the resolv.conf, so that you have access to the internet\n"
 printf "nameserver 8.8.8.8\nnameserver 8.8.4.4\n" > etc/resolv.conf
+printf "127.0.0.1 localhost" > etc/hosts
 stubs=()
 stubs+=('usr/bin/groups')
 for f in ${stubs[@]};do
@@ -59,11 +61,11 @@ cd $cur
 
 fi
 
-mkdir -p ubuntu-binds
+mkdir -p $directory-binds
 bin=startubuntu.sh
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Creating the start script, please wait...\n"
 cat > $bin <<- EOM
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 cd \$(dirname \$0)
 ## unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
@@ -73,15 +75,15 @@ command="proot"
 command+=" --link2symlink"
 command+=" -0"
 command+=" -r $directory"
-if [ -n "\$(ls -A ubuntu-binds)" ]; then
-    for f in ubuntu-binds/* ;do
+if [ -n "\$(ls -A $directory-binds)" ]; then
+    for f in $directory-binds/* ;do
       . \$f
     done
 fi
 command+=" -b /dev"
 command+=" -b /proc"
 command+=" -b /sys"
-command+=" -b ubuntu-fs/tmp:/dev/shm"
+command+=" -b $directory/tmp:/dev/shm"
 command+=" -b /data/data/com.termux"
 command+=" -b /:/host-rootfs"
 command+=" -b /sdcard"
