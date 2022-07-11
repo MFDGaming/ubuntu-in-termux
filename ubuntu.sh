@@ -50,6 +50,18 @@ printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Fixing the resolv.conf, so that you have access to the internet\n"
 printf "nameserver 8.8.8.8\nnameserver 8.8.4.4\n" > etc/resolv.conf
 printf "127.0.0.1 localhost" > etc/hosts
+cat > etc/apt/sources.list <<EOF
+deb http://archive.ubuntu.com/ubuntu/ jammy main restricted
+deb http://archive.ubuntu.com/ubuntu/ jammy-updates main restricted
+deb http://archive.ubuntu.com/ubuntu/ jammy universe
+deb http://archive.ubuntu.com/ubuntu/ jammy-updates universe
+deb http://archive.ubuntu.com/ubuntu/ jammy multiverse
+deb http://archive.ubuntu.com/ubuntu/ jammy-updates multiverse
+deb http://archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted
+deb http://security.ubuntu.com/ubuntu/ jammy-security universe
+deb http://security.ubuntu.com/ubuntu/ jammy-security multiverse
+EOF
 stubs=()
 stubs+=('usr/bin/groups')
 for f in ${stubs[@]};do
