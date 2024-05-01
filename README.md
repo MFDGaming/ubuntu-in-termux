@@ -34,15 +34,24 @@ apt-get install proot -y
 ```bash
 apt-get install git -y
 ```
-5. Go to HOME folder:
-```bash
-cd ~
-```
+5. Go to HOME folder: [ cd ~ ]
 6. Download script:
 ```bash
 git clone https://github.com/MFDGaming/ubuntu-in-termux.git
 ```
-7. Go to script folder: `cd ubuntu-in-termux`
-8. Give execution permission: `chmod +x ubuntu.sh`
-9. Run the script: `./ubuntu.sh -y`
-10. Now just start ubuntu: `./startubuntu.sh`
+7. Go to script folder: 
+```bash
+cd ubuntu-in-termux
+```
+8. Give execution permission:
+```bash
+chmod +x ubuntu.sh
+```
+9. Run the script: 
+```bash
+./ubuntu.sh -y
+```
+10. Now just start ubuntu:
+```bash
+./startubuntu.sh
+```
