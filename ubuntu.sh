@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+apt update -y && apt upgrade -y
+apt install wget proot -y
+
 time1="$( date +"%r" )"
 
 install1 () {
