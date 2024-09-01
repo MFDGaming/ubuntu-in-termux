@@ -122,19 +122,19 @@ else
             ;;
         14.04.5|14.04.6)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
-        16*)
+        16.04.6)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/16.04/release/ubuntu-base-16.04.6-base-${ARCHITECTURE}.tar.gz"
             ;;
-        18*)
+        18.04.5)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-${ARCHITECTURE}.tar.gz"
             ;;
-        20*)
+        20.04|20.04.1|20.04.2|20.04.3|20.04.4|20.04.5)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
             ;;
-        22*)
+        22.04|22.04.1|22.04.2|22.04.3|22.04.4)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
             ;;
-        24*)
+        24.04.1)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
             ;;
      esac
