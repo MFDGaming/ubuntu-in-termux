@@ -9,9 +9,9 @@ This is a script that allows you to install Ubuntu in your termux application wi
 
 **• Added more version**
 
-##Limitations 
+## Limitations 
 
-** This script downloads file from Ubuntu's file server via some fixed urls. They can fail if the addresses are changed or if the files were removed. Consider changing version if the download fails persistently.**
+**This script downloads file from Ubuntu's file server via some fixed urls. They can fail if the addresses are changed or if the files were removed. Consider changing version if the download fails persistently.**
 
 
 ## Important
