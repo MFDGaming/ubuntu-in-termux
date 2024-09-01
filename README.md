@@ -1,6 +1,5 @@
-# ubuntu-in-termux
+# ubuntu-in-termux (Updated)
 
-[![DISCORD](https://img.shields.io/badge/Chat-On%20Discord-738BD7.svg?style=for-the-badge)](https://discord.gg/Xaqkdeh)
 
 ## What's This?
 
@@ -8,7 +7,7 @@ This is a script that allows you to install Ubuntu in your termux application wi
 
 ## Updates
 
-**• Updated to ubuntu 22.04**
+**• Added more version**
 
 ## Important
 
@@ -23,8 +22,9 @@ This is a script that allows you to install Ubuntu in your termux application wi
 3. Install proot: `apt-get install proot -y`
 4. Install git: `apt-get install git -y`
 5. Go to HOME folder: `cd ~`
-6. Download script: `git clone https://github.com/MFDGaming/ubuntu-in-termux.git`
+6. Download script: `git clone https://github.com/TISnoob/ubuntu-in-termux.git`
 7. Go to script folder: `cd ubuntu-in-termux`
 8. Give execution permission: `chmod +x ubuntu.sh`
-9. Run the script: `./ubuntu.sh -y`
-10. Now just start ubuntu: `./startubuntu.sh`
+9. Run the script: `./ubuntu.sh`
+10. Enter version name: `noble,mantic,jammy etc`
+11. Now just start ubuntu: `./startubuntu.sh`
