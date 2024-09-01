@@ -1,4 +1,4 @@
-# ubuntu-in-termux (Updated)
+# ubuntu-in-termux (Advanced)
 
 
 ## What's This?
@@ -8,6 +8,11 @@ This is a script that allows you to install Ubuntu in your termux application wi
 ## Updates
 
 **• Added more version**
+
+##Limitations 
+
+** This script downloads file from Ubuntu's file server via some fixed urls. They can fail if the addresses are changed or if the files were removed. Consider changing version if the download fails persistently.**
+
 
 ## Important
 
@@ -24,5 +29,5 @@ This is a script that allows you to install Ubuntu in your termux application wi
 5. Go to script folder: `cd ubuntu-in-termux`
 6. Give execution permission: `chmod +x ubuntu.sh`
 7. Run the script: `./ubuntu.sh`
-8. Enter version name: `noble,mantic,jammy etc`
+8. Configure installation.
 9. Now just start ubuntu: `./startubuntu.sh`
