@@ -11,7 +11,7 @@ printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 18
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 16.04 LTS - Xenial Xerus\n"
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 14.04 LTS - Trusty Tahr\n"
 
-echo "Enter your name (noble,mantic,jammy.....):"
+echo "Enter version name (noble,mantic,jammy.....):"
 read UBUNTU_VERSION
 
 install1 () {
