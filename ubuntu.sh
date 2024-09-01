@@ -2,9 +2,21 @@
 
 time1="$( date +"%r" )"
 
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m Ubuntu Version:\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 24.04 LTS - Noble Numbat\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 23.10     - Mantic Minotaur\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 22.04 LTS - Jammy Jellyfish\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 20.04 LTS - Focal Fossa\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 18.04 LTS - Bionic Beaver\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 16.04 LTS - Xenial Xerus\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 14.04 LTS - Trusty Tahr\n"
+
+echo "Enter your name (noble,mantic,jammy.....):"
+read UBUNTU_VERSION
+
 install1 () {
 directory=ubuntu-fs
-UBUNTU_VERSION=jammy
+#UBUNTU_VERSION=jammy
 if [ -d "$directory" ];then
 first=1
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;227m[WARNING]:\e[0m \x1b[38;5;87m Skipping the download and the extraction\n"
