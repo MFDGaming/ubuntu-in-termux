@@ -122,6 +122,7 @@ else
             ;;
         14.04.5|14.04.6)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
+            ;;
         16.04.6)
             download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/16.04/release/ubuntu-base-16.04.6-base-${ARCHITECTURE}.tar.gz"
             ;;
