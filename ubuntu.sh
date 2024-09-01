@@ -1,10 +1,149 @@
 #!/data/data/com.termux/files/usr/bin/bash
-
 time1="$( date +"%r" )"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m Select a version:\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 1. 14.04 LTS (Trusty Tahr)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 2. 16.04.6 LTS (Xenial Xerus)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 3. 18.04.5 LTS (Bionic Beaver)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 4. 19.04 (Disco Dingo)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 5. 20.04 LTS (Focal Fossa)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 6. 22.04 LTS (Jammy Jellyfish)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 7. 23.04 (Lunar Lobster)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 8. 24.04.1 LTS - latest (Noble Numbat)\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m 9. Custom version\n"
+read -p "Enter the number corresponding to your choice: " version_choice
+
+case $version_choice in
+    1) 
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mSelect version - 14.04.*\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m1. 14.04\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m2. 14.04.1\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m3. 14.04.2\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m4. 14.04.3\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m5. 14.04.4\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m6. 14.04.5\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m7. 14.04.6\n"
+        read -p "Enter the number corresponding to your choice: " sub_choice
+        case $sub_choice in
+            1) selected_var="14.04" ;;
+            2) selected_var="14.04.1" ;;
+            3) selected_var="14.04.2" ;;
+            4) selected_var="14.04.3" ;;
+            5) selected_var="14.04.4" ;;
+            6) selected_var="14.04.5" ;;
+            7) selected_var="14.04.6" ;;
+            *) printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mInvalid selection!" ;;
+        esac
+        ;;
+    2) 
+        selected_var="16.04.6"
+        ;;
+    3) 
+        selected_var="18.04.5"
+        ;;
+    4)
+        selected_var="19.04"
+        ;;
+    5) 
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mSelect version - 20.04.*\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m1. 20.04\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m2. 20.04.1\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m3. 20.04.2\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m4. 20.04.3\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m5. 20.04.4\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m6. 20.04.5\n"
+        read -p "Enter the number corresponding to your choice: " sub_choice
+        case $sub_choice in
+            1) selected_var="20.04" ;;
+            2) selected_var="20.04.1" ;;
+            3) selected_var="20.04.2" ;;
+            4) selected_var="20.04.3" ;;
+            5) selected_var="20.04.4" ;;
+            6) selected_var="20.04.5" ;;
+            *) printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mInvalid selection!" ;;
+        esac
+        ;;
+
+    6) 
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mSelect version - 22.04.*\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m1. 22.04\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m2. 22.04.1\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m3. 22.04.2\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m4. 22.04.3\n"
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87m5. 22.04.4\n"
+        read -p "Enter the number corresponding to your choice: " sub_choice
+        case $sub_choice in
+            1) selected_var="22.04" ;;
+            2) selected_var="22.04.1" ;;
+            3) selected_var="22.04.2" ;;
+            4) selected_var="22.04.3" ;;
+            5) selected_var="22.04.4" ;;
+            *) printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mInvalid selection!" ;;
+        esac
+        ;;
+    
+    7)
+        selected_var="23.04"
+        ;;
+    8) 
+        selected_var="24.04.1"
+        ;;
+    9)
+        read -p "Enter the Download URL of the custom version: " custom_url
+        ;;
+    *)
+        printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[INFO]:\e[0m \x1b[38;5;87mInvalid version selection!"
+        exit 1
+        ;;
+esac
+
+ARCHITECTURE=$(dpkg --print-architecture)
+case "$ARCHITECTURE" in
+aarch64) ARCHITECTURE=arm64;;
+arm) ARCHITECTURE=armhf;;
+amd64|x86_64) ARCHITECTURE=amd64;;
+*)
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Unknown architecture :- $ARCHITECTURE"
+exit 1
+;;
+esac
+
+if [ -n "$custom_url" ]; then
+    download_url="$custom_url"
+else
+    case $selected_var in
+        19.04)
+            download_url="https://old-releases.ubuntu.com/releases/ubuntu-base/releases/19.04/release/ubuntu-base-19.04-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        23.04)
+            download_url="https://old-releases.ubuntu.com/releases/lunar/ubuntu-23.04-netboot-amd64.tar.gz"
+            ;;
+        14.04|14.04.1|14.04.2|14.04.3|14.04.4)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-core-${ARCHITECTURE}.tar.gz"
+            ;;
+        14.04.5|14.04.6)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        16.04.6)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/16.04/release/ubuntu-base-16.04.6-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        18.04.5)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        20.04|20.04.1|20.04.2|20.04.3|20.04.4|20.04.5)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        22.04|22.04.1|22.04.2|22.04.3|22.04.4)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
+            ;;
+        24.04.1)
+            download_url="https://cdimage.ubuntu.com/ubuntu-base/releases/${selected_var}/release/ubuntu-base-${selected_var}-base-${ARCHITECTURE}.tar.gz"
+            ;;
+     esac
+fi
+ 
 
 install1 () {
 directory=ubuntu-fs
-UBUNTU_VERSION=jammy
 if [ -d "$directory" ];then
 first=1
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;227m[WARNING]:\e[0m \x1b[38;5;87m Skipping the download and the extraction\n"
@@ -23,20 +162,17 @@ rm -rf ubuntu.tar.gz
 fi
 if [ ! -f "ubuntu.tar.gz" ];then
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Downloading the ubuntu rootfs, please wait...\n"
-ARCHITECTURE=$(dpkg --print-architecture)
-case "$ARCHITECTURE" in
-aarch64) ARCHITECTURE=arm64;;
-arm) ARCHITECTURE=armhf;;
-amd64|x86_64) ARCHITECTURE=amd64;;
-*)
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Unknown architecture :- $ARCHITECTURE"
-exit 1
-;;
 
-esac
-
-wget https://partner-images.canonical.com/core/${UBUNTU_VERSION}/current/ubuntu-${UBUNTU_VERSION}-core-cloudimg-${ARCHITECTURE}-root.tar.gz -q -O ubuntu.tar.gz 
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Download complete!\n"
+wget --progress=bar:force $download_url -O ubuntu.tar.gz
+if [ $? -eq 0 ]; then
+    printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Download complete!\n"
+else
+    printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Download Failed!\n"
+    printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Please check your internet connection and try again.\n"
+    printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m If you have selected custom version, please check url you had provided.\n"
+    printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m If the issue persists, please report it at https://github.com/TISnoob/ubuntu-in-termux/issues"
+    exit 1
+fi
 
 fi
 
